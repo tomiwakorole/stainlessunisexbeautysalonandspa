@@ -72,9 +72,14 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-image-wrap">
         <img
-          src="https://images.unsplash.com/photo-1521590832167-7bcb3f4f45f5?auto=format&fit=crop&w=900&q=80"
-          alt="Beauty salon and spa treatment"
+          src="/src/assets/ceo.png"
+          alt="Portrait of the CEO of Stainless Beauty Unisex Salon and Spa"
         />
+        <div className="about-image-caption">
+          <span className="caption-role">CEO</span>
+          <span className="caption-name">KOROLE ADEJUMOKE OLUWAKEMI</span>
+          <span className="caption-brand">Stainless Beauty Unisex Salon and Spa</span>
+        </div>
       </div>
 
       <div className="about-copy">

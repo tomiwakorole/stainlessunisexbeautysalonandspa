@@ -13,6 +13,7 @@ const BookingCTA = () => {
       <form className="booking-form" onSubmit={(event) => event.preventDefault()}>
         <input type="text" placeholder="Your name" aria-label="Your name" />
         <input type="email" placeholder="Email address" aria-label="Email address" />
+        <input type="tel" placeholder="Phone number" aria-label="Phone number" />
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="book-btn">
           Request appointment
         </a>
