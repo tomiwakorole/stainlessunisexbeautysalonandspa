@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import ceoImage from '../assets/ceo.png';
 import '../styles/About.css';
 import { WHATSAPP_URL } from '../utils/whatsapp';
 
@@ -72,7 +73,7 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-image-wrap">
         <img
-          src="/src/assets/ceo.png"
+          src={ceoImage}
           alt="Portrait of the CEO of Stainless Beauty Unisex Salon and Spa"
         />
         <div className="about-image-caption">
