@@ -22,6 +22,13 @@ const Contact = () => {
           <div>
             <strong>Location</strong>
             <span>Km 3, Omolade Oguntade Crescent, Behind Justrite Superstores Ota.</span>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=3+Omolade+Oguntade+Crescent+Behind+Justrite+Superstore+Ota"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
       </div>

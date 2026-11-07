@@ -6,7 +6,7 @@ import { WHATSAPP_URL } from '../utils/whatsapp';
 const stats = [
   { value: 1000, suffix: '+', label: 'satisfied customers' },
   { value: 50, suffix: '+', label: 'international clients' },
-  { value: 500, suffix: '+', label: 'refreshed wigs' },
+  { value: 500, suffix: '+', label: 'refurbished wigs' },
   { value: 24, suffix: '/7', label: 'response support' },
 ];
 

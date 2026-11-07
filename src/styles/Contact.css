@@ -44,6 +44,14 @@
   color: rgba(25, 27, 26, 0.72);
 }
 
+.contact-cards a {
+  margin-top: 0.35rem;
+  color: var(--olive-800);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
 .contact-form {
   display: grid;
   gap: 1rem;
