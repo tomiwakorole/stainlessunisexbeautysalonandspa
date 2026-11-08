@@ -42,9 +42,20 @@ const Footer = () => {
         <div className="footer-col social-col">
           <h4>Follow Us</h4>
           <div className="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Tiktok</a>
+            <a
+              href="https://www.instagram.com/stainlesshair.salonandspa/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.tiktok.com/@stainlessalon2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              TikTok
+            </a>
           </div>
         </div>
       </div>
