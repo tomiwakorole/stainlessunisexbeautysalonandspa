@@ -1,13 +1,30 @@
 import { useState } from 'react';
 import '../styles/Gallery.css';
+import nailsImage from '../assets/nails.jpg';
+import lashesImage from '../assets/lashes.jpg';
+import lockingdreadsImage from '../assets/lockingdreads.jpg';
+import wigrevampImage from '../assets/wigrevamp.jpg';
+import cavitationImage from '../assets/cavitation.jpg';
+import laserlipolysisImage from '../assets/laserlipolysis.jpg';
+import facialVideo from '../assets/facial.mp4';
+import braidingVideo from '../assets/braidingservice.mp4';
+import installationVideo from '../assets/installation.mp4';
+import ghanaWeavingVideo from '../assets/ghanaweaving.mp4';
 
 const images = [
-  'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
+  nailsImage,
+  lashesImage,
+  lockingdreadsImage,
+  wigrevampImage,
+  cavitationImage,
+  laserlipolysisImage,
+];
+
+const videos = [
+  { src: facialVideo, poster: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80' },
+  { src: braidingVideo, poster: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80' },
+  { src: installationVideo, poster: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80' },
+  { src: ghanaWeavingVideo, poster: 'https://images.unsplash.com/photo-1517841905240-472988c2477d?auto=format&fit=crop&w=900&q=80' },
 ];
 
 const Gallery = () => {
@@ -26,10 +43,22 @@ const Gallery = () => {
             key={image + index}
             type="button"
             className="gallery-item"
-            onClick={() => setSelected(image)}
+            onClick={() => setSelected({ type: 'image', src: image })}
             aria-label="Open gallery image"
           >
             <img src={image} alt={`Salon treatment ${index + 1}`} />
+          </button>
+        ))}
+
+        {videos.map((video, index) => (
+          <button
+            key={`video-${index}`}
+            type="button"
+            className="gallery-item gallery-video"
+            onClick={() => setSelected({ type: 'video', src: video.src, poster: video.poster })}
+            aria-label="Open gallery video"
+          >
+            <video src={video.src} poster={video.poster} muted loop autoPlay playsInline />
           </button>
         ))}
       </div>
@@ -40,7 +69,11 @@ const Gallery = () => {
             <button type="button" className="close-lightbox" onClick={() => setSelected(null)}>
               ×
             </button>
-            <img src={selected} alt="Enlarged salon view" />
+            {selected.type === 'video' ? (
+              <video src={selected.src} poster={selected.poster} controls autoPlay muted loop />
+            ) : (
+              <img src={selected.src} alt="Enlarged salon view" />
+            )}
           </div>
         </div>
       )}

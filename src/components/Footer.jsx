@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="social-links">
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
-            <a href="#">Pinterest</a>
+            <a href="#">Tiktok</a>
           </div>
         </div>
       </div>

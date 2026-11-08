@@ -1,14 +1,32 @@
 import { WHATSAPP_URL } from '../utils/whatsapp';
 
-const ServiceCard = ({ icon, title, description, image }) => {
+const ServiceCard = ({ icon, title, description, image, video }) => {
   return (
     <article className="service-card">
-      {image ? <img src={image} alt={title} className="service-image" /> : null}
+      <div className="service-visual">
+        {video ? (
+          <video
+            className="service-media"
+            src={video}
+            poster={image}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <img src={image} alt={title} className="service-image" />
+          </video>
+        ) : image ? (
+          <img src={image} alt={title} className="service-image" />
+        ) : null}
+
+      </div>
+
       <div className="service-body">
-        <div className="service-icon">{icon}</div>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
+
       <div className="service-meta">
         <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="service-btn">
           Book now

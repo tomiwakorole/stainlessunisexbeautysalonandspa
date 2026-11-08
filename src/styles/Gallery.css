@@ -24,9 +24,16 @@
   transform: translateY(-3px);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   height: 260px;
+  width: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.gallery-video video {
+  background: #000;
 }
 
 .lightbox {
@@ -48,9 +55,12 @@
   overflow: hidden;
 }
 
-.lightbox-content img {
+.lightbox-content img,
+.lightbox-content video {
   max-height: 80vh;
+  width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .close-lightbox {
