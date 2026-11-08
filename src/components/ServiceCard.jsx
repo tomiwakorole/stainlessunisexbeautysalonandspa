@@ -13,6 +13,8 @@ const ServiceCard = ({ icon, title, description, image, video }) => {
             muted
             loop
             playsInline
+            webkit-playsinline="true"
+            preload="auto"
           >
             <img src={image} alt={title} className="service-image" />
           </video>

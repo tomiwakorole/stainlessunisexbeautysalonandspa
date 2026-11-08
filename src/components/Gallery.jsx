@@ -58,7 +58,16 @@ const Gallery = () => {
             onClick={() => setSelected({ type: 'video', src: video.src, poster: video.poster })}
             aria-label="Open gallery video"
           >
-            <video src={video.src} poster={video.poster} muted loop autoPlay playsInline />
+            <video
+              src={video.src}
+              poster={video.poster}
+              muted
+              loop
+              autoPlay
+              playsInline
+              webkit-playsinline="true"
+              preload="auto"
+            />
           </button>
         ))}
       </div>
@@ -70,7 +79,17 @@ const Gallery = () => {
               ×
             </button>
             {selected.type === 'video' ? (
-              <video src={selected.src} poster={selected.poster} controls autoPlay muted loop />
+              <video
+                src={selected.src}
+                poster={selected.poster}
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                webkit-playsinline="true"
+                preload="auto"
+              />
             ) : (
               <img src={selected.src} alt="Enlarged salon view" />
             )}
